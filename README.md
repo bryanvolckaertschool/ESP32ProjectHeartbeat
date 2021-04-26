@@ -13,6 +13,8 @@ The used SPO2 sensor and chip used for testing where the afe4404 (adc/controller
 
 # External Links and repositorys
 ## related repositorys
-old repository: https://github.com/SoenensBram/HorlogeESP8622
 Server repository: https://github.com/bryanvolckaertschool/Projectheartbeat
+
 Website: https://vzwheartbeats.be/
+
+Old repository: https://github.com/SoenensBram/HorlogeESP8622
