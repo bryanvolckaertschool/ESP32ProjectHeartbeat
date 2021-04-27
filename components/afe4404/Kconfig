@@ -1,0 +1,9 @@
+menu "afe4404"
+    menu "Patient data"
+        config Patient_ID
+            int "ID"
+            default 1
+            help
+                Identifier for the user
+    endmenu
+endmenu
