@@ -22,7 +22,7 @@ SCL - G2
 `idf.py menuconfig` in the repo directory you can open the project specific configuration menu of the espressif library.
 The most important settings to change are the following:
  - under `Example Connection Configuration` change the wifi credentials to match your network.
- - under `Component Config` `afe4404` `Patient data` change the ID to the right patient id.
+ - under `Component Config` -> `afe4404` -> `Patient data` change the ID to the right patient id.
 exit the menu by pressing escape until you get the save settings dialog.
 
 ## How to flash
