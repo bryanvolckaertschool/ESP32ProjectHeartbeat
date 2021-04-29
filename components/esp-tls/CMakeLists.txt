@@ -9,7 +9,7 @@ if(CONFIG_ESP_TLS_USING_WOLFSSL)
         "esp_tls_wolfssl.c")
 endif()
 
-idf_component_register(SRCS "${srcs}"
+idf_component_register(SRCS "esp_tls.c" "${srcs}"
                     INCLUDE_DIRS "."
                     PRIV_INCLUDE_DIRS "private_include"
                     REQUIRES mbedtls
