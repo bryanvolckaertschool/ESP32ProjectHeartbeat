@@ -4,8 +4,12 @@ The goal of this firmware is to calculate heartrate from an spo2 sensor and send
 # Hardware
 ## Microcontroller
 The microcontroller we use here is an ESP32.
+
+![Current envisioned loop](Images/ESP32WROOM.jpeg)
 ## SPO2 Sensor
 The used SPO2 sensor and chip used for testing where the afe4404 (adc/controller), vemd8080 (fotodiode) and 2 green leds.
+
+![Current envisioned loop](Images/HeartRate7Click.jpg)
 
 # How to get started
 ## Toolchain and esp-idf installation
