@@ -5,15 +5,15 @@ The goal of this firmware is to calculate heartrate from an spo2 sensor and send
 ## Microcontroller
 The microcontroller we use here is an ESP32.
 
-![Current envisioned loop](Images/ESP32WROOM.jpeg)
+<img src="Images/PrototypeV0.0.2UnderSide.png" height="350">
+
 ## SPO2 Sensor
 The used SPO2 sensor and chip used for testing where the afe4404 (adc/controller), vemd8080 (fotodiode) and 2 green leds.
 
-![Current envisioned loop](Images/HeartRate7Click.jpg)
+<img src="Images/PrototypeV0.0.2TopSide.png" height="350">
 
 # How to get started
-## Toolchain and esp-idf installation
-https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#introduction
+## [Toolchain and esp-idf installation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#introduction)
 
 ## Connections
 Assuming you use the same sensor and esp32 you will have to connect them as following:
@@ -37,10 +37,12 @@ Assuming you havent changed the code you should encounter an error saying http r
 ## Envisioned procedure for the Firmware
 ![Current envisioned loop](Images/scheme1.png)
 
-# External Links and repositorys
-## related repositorys
-Server repository: https://github.com/bryanvolckaertschool/Projectheartbeat
-Old repository: https://github.com/SoenensBram/HorlogeESP8622
+# External Links and Repositorys
+## Related Repositorys
+[Server repository](https://github.com/bryanvolckaertschool/Projectheartbeat)
 
-Website: https://vzwheartbeats.be/
+[Old repository](https://github.com/SoenensBram/HorlogeESP8622)
 
+[Website](https://vzwheartbeats.be/)
+
+[ESP-IDF Documentation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html)
