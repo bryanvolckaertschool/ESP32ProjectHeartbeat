@@ -5,12 +5,12 @@ The goal of this firmware is to calculate heartrate from an spo2 sensor and send
 ## Microcontroller
 The microcontroller we use here is an ESP32.
 
-<img src="Images/PrototypeV0.0.2UnderSide.png" height="350">
+<img src="Images/PrototypeV0.0.2UnderSide.png" height="350" width="705">
 
 ## SPO2 Sensor
 The used SPO2 sensor and chip used for testing where the afe4404 (adc/controller), vemd8080 (fotodiode) and 2 green leds.
 
-<img src="Images/PrototypeV0.0.2TopSide.png" height="350">
+<img src="Images/PrototypeV0.0.2TopSide.png" height="350" width="697">
 
 # How to get started
 ## [Toolchain and esp-idf installation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#introduction)
