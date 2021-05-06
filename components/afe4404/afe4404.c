@@ -144,20 +144,51 @@ static esp_err_t I2cMasterAfe4404InitializeRegister(){
 uint32_t EspSpo2Data(){
     uint8_t data1[3];
     uint8_t length = 3;
-
-    i2c_master_read_slave(0x2A, &data1, length);
     uint32_t retVal = 0;
-    retVal = data1[0];
-    retVal = (retVal << 8) | data1[1];
-    retVal = (retVal << 8) | data1[2]; 
-      if (retVal & 0x00200000)  // check if the ADC value is positive or negative
-      {
-        retVal &= 0x003FFFFF;   // convert it to a 22 bit value
-        return (retVal^0xFFC00000);
-      }
-    ESP_LOGI(TAG2, "$%d 0;", retVal/200);
-    // printf("%d\n",retVal);
+    uint16_t regAddr = 0x2A;
+    uint32_t regVal = 0;
+    while(retVal>4194303|retVal<1000){
+        i2c_master_read_slave(regAddr, &data1, length);
+        retVal = data1[0];
+        retVal = (retVal << 8) | data1[1];
+        retVal = (retVal << 8) | data1[2]; 
+        if (retVal & 0x00200000)  // check if the ADC value is positive or negative
+        {
+            retVal &= 0x003FFFFF;   // convert it to a 22 bit value
+            return (retVal^0xFFC00000);
+        }
+        ESP_LOGI(TAG2, "$%d 0;", retVal/200);
+        if(retVal<4194303){
+            regVal = OffsetRaiseBy1(regVal);
+            if(retVal>1){
+            }else{
+                if(regVal =0)regVal = OffsetSetNegative();
+                regVal = OffsetRaiseBy1(regVal);
+            }
+        }
+        I2C_WRITE_TO_AFE4404(DAC_SETTING,regVal,3);// is 3 bytes long
+    }
+        // printf("%d\n",retVal);
     return retVal/200;
+}
+
+static uint32_t OffsetSetNegative(){
+    //offsetverzetten offset
+    uint32_t regVal = 0;
+    regVal |= ( 1 << POL_OFFDAC_LED2);
+    regVal |= ( 1 << POL_OFFDAC_AMB1);
+    regVal |= ( 1 << POL_OFFDAC_LED1);
+    regVal |= ( 1 << POL_OFFDAC_LED3);
+    return regVal;
+}
+
+static uint32_t OffsetRaiseBy1(u_int32_t carryRegsettings){
+    //offsert 1 verhogen
+    carryRegsettings += ( 1 << I_OFFDAC_LED2);
+    carryRegsettings += ( 1 << I_OFFDAC_AMB1);
+    carryRegsettings += ( 1 << I_OFFDAC_LED1);
+    carryRegsettings += ( 1 << I_OFFDAC_LED3);
+    return carryRegsettings;
 }
 
 
