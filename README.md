@@ -39,6 +39,8 @@ exit the menu by pressing escape until you get the save settings dialog.
 Once you have followed the before mentioned configuration, connected the afe4404 board and your ESP32. Then you can start to flash to the esp32. You can do this by typing `idf.py flash monitor` in the project repo. Once the building and flashing is done you should see the correct printouts. after about 25 seconds your heartbeat should be displayed.
 Assuming you havent changed the code you should encounter an error saying http request failed. For now the URL is hardcoded but in future versions it will be added to a seperate menu. And it will also be mentioned in Changing settings.
 
+### [Toolchain commands](https://github.com/espressif/vscode-esp-idf-extension#available-tasks-in-tasksjson)
+
 # Block digram
 ## Envisioned procedure for the Firmware
 ![Current envisioned loop](Images/scheme1.png)
