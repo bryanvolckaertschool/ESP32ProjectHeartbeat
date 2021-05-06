@@ -2,12 +2,12 @@
 The goal of this firmware is to calculate heartrate from an spo2 sensor and send this to an on-site server. 
 
 # Hardware
-## Microcontroller
+## [Microcontroller](https://www.espressif.com/en/products/socs/esp32)
 The microcontroller we use here is an ESP32.
 
 <img src="Images/PrototypeV0.0.2UnderSide.png" height="350" width="705">
 
-## SPO2 Sensor
+## [SPO2 Sensor](https://www.ti.com/product/AFE4404)
 The used SPO2 sensor and chip used for testing where the afe4404 (adc/controller), vemd8080 (fotodiode) and 2 green leds.
 
 <img src="Images/PrototypeV0.0.2TopSide.png" height="350" width="697">
