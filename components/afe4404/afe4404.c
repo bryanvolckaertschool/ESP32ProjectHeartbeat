@@ -147,7 +147,7 @@ uint32_t EspSpo2Data(){
     uint32_t retVal = 0;
     uint16_t regAddr = 0x2A;
     uint32_t regVal = 0;
-    while(retVal>4194303|retVal<1000){
+    while(retVal>4194303&retVal<1000){
         i2c_master_read_slave(regAddr, &data1, length);
         retVal = data1[0];
         retVal = (retVal << 8) | data1[1];
