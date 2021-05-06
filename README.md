@@ -12,6 +12,9 @@ The used SPO2 sensor and chip used for testing where the afe4404 (adc/controller
 
 <img src="Images/PrototypeV0.0.2TopSide.png" height="350" width="697">
 
+## How to assemble 
+Make sure that you put an isolator between the 2 pcb's so you prevent potential shorts. If you want to assemble the basic prototype as in the pictures above. The jumper is necessary for powering of the AFE4404 otherwise you can't flash the ESP32. 
+
 # How to get started
 ## [Toolchain and esp-idf installation](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html#introduction)
 
