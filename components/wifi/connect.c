@@ -8,7 +8,7 @@
  */
 
 #include <string.h>
-#include "protocol_examples_common.h"
+#include "wifi.h"
 #include "sdkconfig.h"
 #include "esp_event.h"
 #include "esp_wifi.h"
