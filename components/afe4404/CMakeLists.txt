@@ -1,1 +1,1 @@
-idf_component_register(SRCS "afe4404.c" INCLUDE_DIRS "." REQUIRES reversei2c)
+idf_component_register(SRCS INCLUDE_DIRS "." REQUIRES reversei2c)
